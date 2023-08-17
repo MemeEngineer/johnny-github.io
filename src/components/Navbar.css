@@ -14,7 +14,7 @@
     border-radius: 50%;
     font-weight: bold;
     font-size: 22px;
-    top: 55px;
+    top: 100px;
     cursor: pointer;
   }
   #header .pro-sidebar {
@@ -23,7 +23,7 @@
   }
   #header .pro-sidebar.collapsed {
     width: 80px;
-    min-width: 80px;
+    min-width: 180px;
   }
   #header .pro-sidebar-inner {
     background-color: white;
