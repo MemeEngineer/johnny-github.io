@@ -15,6 +15,7 @@ import {
   FiArrowLeftCircle,
   FiArrowRightCircle,
 } from "react-icons/fi";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { RiPencilLine } from "react-icons/ri";
 import { BiCog } from "react-icons/bi";
 import "react-pro-sidebar/dist/css/styles.css";
@@ -41,7 +42,11 @@ export default function Navbar() {
             <div className="logotext">
               {/* small and big change using menucollapse state */}
               <p>
-                {menuCollapse ? <img src={JWLOGO} alt="JW Logo" /> : <img src={JohnnyWu} alt="JohnnyWu" />}
+                {menuCollapse ? (
+                  <img src={JWLOGO} alt="JW Logo" />
+                ) : (
+                  <img src={JohnnyWu} alt="JohnnyWu" />
+                )}
               </p>
             </div>
             <div className="closemenu" onClick={menuIconClick}>
@@ -68,9 +73,18 @@ export default function Navbar() {
               </MenuItem>
             </Menu>
           </SidebarContent>
-          <SidebarFooter>
-            <Menu iconShape="square">
-              <MenuItem icon={<FiLogOut />}>Logout</MenuItem>
+          <SidebarFooter className="sidebarfoot">
+            <Menu className="navfoot">
+              <MenuItem >
+                <a href="https://github.com/MemeEngineer" target="blank">
+                  <BsGithub style={{height:"2em", width:"2em"}}/>
+                </a>
+                </MenuItem>
+                <MenuItem>
+                <a href="https://www.linkedin.com/in/johnnywu5/" target="blank">
+                  <BsLinkedin style={{height:"2em", width:"2em"}}/>
+                </a>
+              </MenuItem>
             </Menu>
           </SidebarFooter>
         </ProSidebar>
