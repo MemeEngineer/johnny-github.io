@@ -1,11 +1,11 @@
 
 
-export default function Labs(){
+export default function Contact(){
 
     return(
         <div>
             <h1>
-                LABS
+                Contact
             </h1>
         </div>
     )
