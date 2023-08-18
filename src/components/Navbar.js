@@ -10,12 +10,10 @@ import {
 } from "react-pro-sidebar";
 import { FaList, FaRegHeart } from "react-icons/fa";
 import {
-  FiHome,
-  FiLogOut,
+  
   FiArrowLeftCircle,
   FiArrowRightCircle,
 } from "react-icons/fi";
-import { BsGithub, BsLinkedin } from "react-icons/bs";
 import Github from "../assets/github.svg.png";
 import Linkedin from "../assets/linkedin.png";
 import { RiPencilLine } from "react-icons/ri";
@@ -81,7 +79,7 @@ export default function Navbar() {
                 <a href="https://github.com/MemeEngineer" target="blank">
                   <img
                     src={Github}
-                    atl="github"
+                    alt="github"
                     style={{ height: "3em", width: "3em" }}
                   />
                 </a>
@@ -92,7 +90,7 @@ export default function Navbar() {
                   alt="Linkedin"
                   target="blank"
                 >
-                  <img src={Linkedin} style={{ height: "3em", width: "3em" }} />
+                  <img src={Linkedin} alt="Linkedin" style={{ height: "3em", width: "3em" }} />
                 </a>
               </MenuItem>
             </Menu>
