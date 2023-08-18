@@ -16,6 +16,8 @@ import {
   FiArrowRightCircle,
 } from "react-icons/fi";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
+import Github from "../assets/github.svg.png";
+import Linkedin from "../assets/linkedin.png";
 import { RiPencilLine } from "react-icons/ri";
 import { BiCog } from "react-icons/bi";
 import "react-pro-sidebar/dist/css/styles.css";
@@ -75,14 +77,22 @@ export default function Navbar() {
           </SidebarContent>
           <SidebarFooter className="sidebarfoot">
             <Menu className="navfoot">
-              <MenuItem >
+              <MenuItem>
                 <a href="https://github.com/MemeEngineer" target="blank">
-                  <BsGithub style={{height:"2em", width:"2em"}}/>
+                  <img
+                    src={Github}
+                    atl="github"
+                    style={{ height: "3em", width: "3em" }}
+                  />
                 </a>
-                </MenuItem>
-                <MenuItem>
-                <a href="https://www.linkedin.com/in/johnnywu5/" target="blank">
-                  <BsLinkedin style={{height:"2em", width:"2em"}}/>
+              </MenuItem>
+              <MenuItem>
+                <a
+                  href="https://www.linkedin.com/in/johnnywu5/"
+                  alt="Linkedin"
+                  target="blank"
+                >
+                  <img src={Linkedin} style={{ height: "3em", width: "3em" }} />
                 </a>
               </MenuItem>
             </Menu>
