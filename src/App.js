@@ -9,8 +9,10 @@ import Labs from "./pages/Labs"
 import Memepage from "./pages/Memepage"
 import Footer from "./components/Footer.js"
 
+
 function App() {
 const [memes, setMemes] = useState(null)
+const [search, setSearch]= useState("")
 const apiKey= process.env.REACT_APP_MEMEAPI_KEY
 
 const url = `https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=5`
@@ -38,10 +40,11 @@ useEffect(() => {
     <div className="App">
       
       <Navbar/>
+      
       <Routes>
 
     <Route path="/" element={<About/>} />
-    <Route path="/gallery" element={<Gallery/>}/>
+    <Route path="/gallery" element={<Gallery search={search} setSearch={setSearch}/>}/>
     <Route path="/contact" element={<Contact/>}/>
     <Route path="/labs" element={<Labs/>}/>
     <Route path="/memes" element={<Memepage memes={memes}/>}/>
