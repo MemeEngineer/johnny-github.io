@@ -1,0 +1,19 @@
+.form-container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+width:20em;
+display: flex;
+flex-direction: column;
+}
+
+textarea{
+    height:15em;
+}
+
+.renderAlert{
+    background-color: green;
+}

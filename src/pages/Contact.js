@@ -1,6 +1,11 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
-
+import "./Contact.css"
+const renderAlert = () => (
+    <div className="renderAlert">
+        <p>Your Message has been submitted Successfully</p>
+    </div>
+)
 export default function Contact() {
   const email_apikey = process.env.REACT_APP_EMAILAPI_KEY;
   const [formData, setFormData] = useState({
@@ -9,7 +14,7 @@ export default function Contact() {
     subject: "",
     message: "",
   });
-  
+  const [status, setStatus] = useState(false)
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -30,6 +35,7 @@ export default function Contact() {
             subject: "",
             message: "",
           })
+          setStatus(true)
         },
         (error) => {
           console.log(error.text);
@@ -45,8 +51,11 @@ export default function Contact() {
   };
   return (
     <div>
-      <h1>Contact</h1>
+        <h1>Contact</h1>
+    <div className="form-container">
+        
       <form onSubmit={sendEmail}>
+      { status && renderAlert()}
         <label>Name</label>
         <input type="text" name="name" value={formData.name}onChange={handleForm} />
         <label>Email</label>
@@ -57,6 +66,7 @@ export default function Contact() {
         <textarea type="text" name="message" value={formData.message} onChange={handleForm}  />
         <input type="submit" value="Send" />
       </form>
+    </div>
     </div>
   );
 }
