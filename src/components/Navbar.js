@@ -8,9 +8,9 @@ import {
   SidebarFooter,
   SidebarContent,
 } from "react-pro-sidebar";
-import { FaList, FaRegHeart } from "react-icons/fa";
+import { FaList, FaImage, FaFlask } from "react-icons/fa";
 import {
-  
+  FiHome,
   FiArrowLeftCircle,
   FiArrowRightCircle,
 } from "react-icons/fi";
@@ -27,11 +27,17 @@ export default function Navbar() {
   //create initial menuCollapse state using useState hook
   const [menuCollapse, setMenuCollapse] = useState(false);
 
+  const [active, setActive] = useState(false)
+
   //create a custom function that will change menucollapse state from false to true and true to false
   const menuIconClick = () => {
     //condition checking to change state from true to false and vice versa
     menuCollapse ? setMenuCollapse(false) : setMenuCollapse(true);
   };
+
+  const handleHover = () => {
+    setActive((active)=> !active)
+  }
 
   return (
     <nav>
@@ -54,21 +60,21 @@ export default function Navbar() {
               {menuCollapse ? <FiArrowRightCircle /> : <FiArrowLeftCircle />}
             </div>
           </SidebarHeader>
-          <SidebarContent>
+          <SidebarContent className="mainmenu">
             <Menu>
-              <MenuItem active={false} icon={<FaRegHeart />}>
+              <MenuItem active={active? true: false} onClick={handleHover} icon={<FiHome />}>
                 <Link to="/">About</Link>
               </MenuItem>
               <MenuItem icon={<FaList />}>
                 <Link to="/gallery">Gallery</Link>
               </MenuItem>
-              <MenuItem active={false} icon={<RiPencilLine />}>
+              <MenuItem  icon={<RiPencilLine />}>
                 <Link to="/contact">Contacts</Link>
               </MenuItem>
-              <MenuItem icon={<BiCog />}>
+              <MenuItem icon={<FaFlask />}>
                 <Link to="/labs">Labs</Link>
               </MenuItem>
-              <MenuItem icon={<BiCog />}>
+              <MenuItem icon={<FaImage />}>
                 <Link to="/memes">Memes</Link>
               </MenuItem>
             </Menu>

@@ -5,6 +5,7 @@
   }
   #header .pro-sidebar {
     height: 80vh;
+
   }
   #header .closemenu {
     color: #000;
@@ -21,6 +22,7 @@
   #header .pro-sidebar {
     width: 100%;
     min-width: 100%;
+
   }
   #header .pro-sidebar.collapsed {
     width: 100px;
@@ -28,7 +30,7 @@
   }
   #header .pro-sidebar-inner {
     background-color: white;
-    box-shadow: 0.5px 0.866px 2px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
   }
   #header .pro-sidebar-inner .pro-sidebar-layout {
     overflow-y: hidden;
@@ -48,7 +50,7 @@
     color: #000;
     margin: 10px 0px;
     font-weight: bold;
-    
+   
     
   }
   #header .pro-sidebar-inner .pro-sidebar-layout ul .pro-inner-item .pro-icon-wrapper {
@@ -62,8 +64,9 @@
     color: #000;
     
   }
-  #header .pro-sidebar-inner .pro-sidebar-layout .active {
+  #header .pro-sidebar-inner .pro-sidebar-layout  li:hover{
     background-image: linear-gradient(0deg, #fece00 0%, #ffe172 100%);
+   
   }
   #header .logo {
     padding: 20px;
@@ -75,10 +78,14 @@
   
 .navfoot ul{
     display:flex;
+    justify-content: center;
+    align-items: center;
     
 }
-  
 
+.pro-sidebar .pro-menu a{
+   color: maroon;
+}
 
   
   @media only screen and (max-width: 720px) {
