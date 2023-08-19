@@ -7,7 +7,7 @@ import Gallery from "./pages/Gallery"
 import Contact from "./pages/Contact"
 import Labs from "./pages/Labs"
 import Memepage from "./pages/Memepage"
-
+import Footer from "./components/Footer.js"
 
 function App() {
 const [memes, setMemes] = useState(null)
@@ -48,6 +48,7 @@ useEffect(() => {
     <Route path="*" element={<About/>}/>
 
       </Routes>
+      <Footer/>
     </div>
   );
 }
