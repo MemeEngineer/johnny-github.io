@@ -89,6 +89,9 @@
 #header .pro-sidebar-inner .pro-sidebar-layout  a:hover{
     color:black;
   }
+  #header .pro-sidebar-inner .pro-sidebar-layout  .active{
+    background-image: linear-gradient(0deg, #fece00 0%, #ffe172 100%);
+  }
   
   @media only screen and (max-width: 720px) {
     html {

@@ -17,7 +17,7 @@ import {
 import Github from "../assets/github.svg.png";
 import Linkedin from "../assets/linkedin.png";
 import { RiPencilLine } from "react-icons/ri";
-import { BiCog } from "react-icons/bi";
+// import { BiCog } from "react-icons/bi";
 import "react-pro-sidebar/dist/css/styles.css";
 import "./Navbar.css";
 import JohnnyWu from "../assets/JohnnyWu.gif";
@@ -27,7 +27,7 @@ export default function Navbar() {
   //create initial menuCollapse state using useState hook
   const [menuCollapse, setMenuCollapse] = useState(false);
 
-  const [active, setActive] = useState(false)
+  const [active, setActive] = useState('')
 
   //create a custom function that will change menucollapse state from false to true and true to false
   const menuIconClick = () => {
@@ -35,8 +35,9 @@ export default function Navbar() {
     menuCollapse ? setMenuCollapse(false) : setMenuCollapse(true);
   };
 
-  const handleHover = () => {
-    setActive((active)=> !active)
+  const handleClick = (e) => {
+    setActive(e.target.text)
+    
   }
 
   return (
@@ -62,19 +63,19 @@ export default function Navbar() {
           </SidebarHeader>
           <SidebarContent className="mainmenu">
             <Menu>
-              <MenuItem active={active? true: false} onClick={handleHover} icon={<FiHome />}>
+              <MenuItem active={active === 'About' ? true: false} onClick={handleClick} icon={<FiHome />}>
                 <Link to="/">About</Link>
               </MenuItem>
-              <MenuItem icon={<FaList />}>
+              <MenuItem active={active === 'Gallery' ? true: false} onClick={handleClick} icon={<FaList />}>
                 <Link to="/gallery">Gallery</Link>
               </MenuItem>
-              <MenuItem  icon={<RiPencilLine />}>
+              <MenuItem active={active === 'Contacts' ? true: false} onClick={handleClick} icon={<RiPencilLine />}>
                 <Link to="/contact">Contacts</Link>
               </MenuItem>
-              <MenuItem icon={<FaFlask />}>
+              <MenuItem active={active === 'Labs' ? true: false} onClick={handleClick}icon={<FaFlask />}>
                 <Link to="/labs">Labs</Link>
               </MenuItem>
-              <MenuItem icon={<FaImage />}>
+              <MenuItem  active={active === 'Memes' ? true: false} onClick={handleClick}icon={<FaImage />}>
                 <Link to="/memes">Memes</Link>
               </MenuItem>
             </Menu>
