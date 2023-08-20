@@ -1,11 +1,52 @@
-.gallery img{
-    width:15em;
-    height:10em;
-    border-radius: 10px;
-}
-.gallery-card{
+.gallery{
     display:flex;
     justify-content: center;
     align-items: center;
-    border:3px solid green;
+    margin: 10px;
+    
+
 }
+.titleimg{
+    /* width:15em;
+    height:25em; */
+    max-width:100%;
+
+}
+
+/* .gallery-card{
+    display:block;
+    justify-content: center;
+    align-items: center;
+    border:3px solid green;
+}*/
+
+.iconlink{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.description{
+    word-wrap: break-word;
+    font-weight: bold;
+}
+.card-content{
+    background-color: yellow;
+}
+.techstack{
+display:flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-around;
+align-items: center;
+}
+
+.tech{
+    margin: 5px;
+    padding: 2px;
+    background-color: grey;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+}
+

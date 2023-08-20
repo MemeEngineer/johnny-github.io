@@ -6,7 +6,6 @@ import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import "./Gallery.css";
 
@@ -24,20 +23,34 @@ export default function Gallery(props) {
 
       {filterproject.map((project, index) => {
         return (
-          <Card>
+          
             <div className="gallery" key={index}>
-              <div className="gallery-card">
+            <Card sx={{ maxWidth: 345 }}> 
+              <div className="titleimg">
                 <a href={project.link} alt="rngrpg" target="blank">
                   <CardMedia component="img" image={project.image}></CardMedia>
                 </a>
-                <CardContent>
-                <Typography>
-                <div>
-                <h3>{project.title}</h3>
-              </div>
-              </Typography>
-                <p>{project.description}</p>
+                <CardContent className="card-content">
+                  <Typography className="description">
+                    
+                      <h3>{project.title}</h3>
+                      <p>{project.description}</p>
+                    
+                  </Typography>
                 </CardContent>
+                <Typography className="techstack" component="div">
+                
+    
+                  {project.tech.map((tech, index) => {
+                    return (
+                      <div key={index} className="tech">
+                        {tech}
+                      </div>
+                    );
+                  })}
+            
+                </Typography>
+                <CardActions className="iconlink">
                 <a href={project.github} target="blank">
                   <img
                     src={Github}
@@ -52,21 +65,10 @@ export default function Gallery(props) {
                     style={{ height: "2em", width: "2em" }}
                   />
                 </a>
-
-                <div>
-                  {" "}
-                  Technology Stack:
-                  {project.tech.map((tech, index) => {
-                    return (
-                      <div key={index}>
-                        <div>{tech}</div>
-                      </div>
-                    );
-                  })}
-                </div>
+                </CardActions>
               </div>
+              </Card>
             </div>
-          </Card>
         );
       })}
     </div>
