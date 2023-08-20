@@ -12,6 +12,8 @@ React SideBar and Icons
 2. `npm i react-pro-sidebar@0.7.1 react-icons`
 Installing Emailjs
 3. `npm install @emailjs/browser --save`
+Material-UI
+4. `npm install @mui/material @emotion/react @emotion/styled`
 
 Links
 EmailJS

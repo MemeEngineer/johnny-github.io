@@ -1,4 +1,11 @@
 .gallery img{
     width:15em;
-    height:5em;
+    height:10em;
+    border-radius: 10px;
+}
+.gallery-card{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border:3px solid green;
 }
