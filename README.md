@@ -6,13 +6,13 @@ created With:
 
 # Install dependencies
 
-- **React Router
+- React Router
 1. `npm i react-router-dom`
-- **React SideBar and Icons
+- React SideBar and Icons
 2. `npm i react-pro-sidebar@0.7.1 react-icons`
-- **Installing Emailjs
+- Installing Emailjs
 3. `npm install @emailjs/browser --save`
-- **Material-UI
+- Material-UI
 4. `npm install @mui/material @emotion/react @emotion/styled`
 
 # Improvement
