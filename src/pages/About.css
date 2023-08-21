@@ -1,0 +1,35 @@
+.plogo{
+    width:50px;
+    margin: 5px;
+}
+
+.skill-container{
+    display:flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-evenly;
+align-items: center;
+background-color: beige;
+padding: 5px;
+
+}
+
+.about-container{
+    display:inline-block;
+    justify-content: center;
+}
+
+.paragraph{
+    display:block;
+    width: 700px;
+}
+.skill{
+    background-color: black;
+    padding: 5px;
+    color: white;
+    margin: 5px;
+}
+
+img.plogo :hover{
+    scale: 150%;
+}

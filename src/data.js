@@ -17,3 +17,43 @@ export const projects = [
      
     },
 ]
+
+export const skills = [
+    {
+        program: "JavaScript",
+        logo: require('./assets/JavaScript.svg').default
+    },
+    {
+        program: "HTML",
+        logo: require('./assets/HTML.svg').default
+    },
+    {
+        program: "CSS",
+        logo: require('./assets/CSS.svg').default
+    },
+    {
+        program: "Ruby on Rails",
+        logo: require('./assets/Ruby.svg').default
+    },
+    {
+        program: "React",
+        logo: require('./assets/React-Dark.svg').default
+    },
+    {
+        program: "MaterialUI",
+        logo: require('./assets/MaterialUI-Dark.svg').default
+    },
+    {
+        program: "Express",
+        logo: require('./assets/ExpressJS-Dark.svg').default
+    },
+    {
+        program: "Node.js",
+        logo: require('./assets/NodeJS-Dark.svg').default
+    },
+    {
+        program: "MongoDB",
+        logo: require('./assets/MongoDB.svg').default
+    }
+
+]

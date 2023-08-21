@@ -1,10 +1,10 @@
-
+import TextField from '@mui/material/TextField';
 export default function SearchBar(props){
-    const {search, setSearch}= props
+    const {setSearch}= props
 
     return(
         <div>
-      <input
+      <TextField
       type= "text"
       placeholder= "Search..." 
        onChange={(e)=> setSearch(e.target.value)}
