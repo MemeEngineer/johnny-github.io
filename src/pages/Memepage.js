@@ -5,7 +5,8 @@ export default function Memepage(props){
     
     return(
         <div>
-            <h1>MemePage</h1>
+            <h1>Memes By Johnny</h1>
+            <p>Fetched from GIPHY API</p>
             {memes.map((meme, index)=> {
                 return(
                     <div key={index}>

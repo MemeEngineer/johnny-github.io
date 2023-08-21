@@ -3,8 +3,12 @@
     justify-content: center;
     align-items: center;
     margin: 10px;
-    
-
+}
+.card{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .titleimg{
     /* width:15em;
@@ -43,4 +47,9 @@ background-color: beige;
     justify-content: center;
     align-items: center;
     background-color: aquamarine;
+}
+
+h3{
+    border-bottom:  0.5px solid;
+    margin: 1px;
 }

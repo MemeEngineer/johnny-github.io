@@ -58,7 +58,7 @@ export default function Navbar() {
             </div>
             <div className="closemenu" onClick={menuIconClick}>
               {/* changing menu collapse icon on click */}
-              {menuCollapse ? <FiArrowRightCircle /> : <FiArrowLeftCircle />}
+              {menuCollapse ? <FiArrowRightCircle  /> : <FiArrowLeftCircle/>}
             </div>
           </SidebarHeader>
           <SidebarContent className="mainmenu">
@@ -69,14 +69,15 @@ export default function Navbar() {
               <MenuItem active={active === 'Gallery' ? true: false} onClick={handleClick} icon={<FaList />}>
                 <Link to="/gallery">Gallery</Link>
               </MenuItem>
-              <MenuItem active={active === 'Contacts' ? true: false} onClick={handleClick} icon={<RiPencilLine />}>
-                <Link to="/contact">Contacts</Link>
-              </MenuItem>
+        
               <MenuItem active={active === 'Labs' ? true: false} onClick={handleClick}icon={<FaFlask />}>
                 <Link to="/labs">Labs</Link>
               </MenuItem>
               <MenuItem  active={active === 'Memes' ? true: false} onClick={handleClick}icon={<FaImage />}>
                 <Link to="/memes">Memes</Link>
+              </MenuItem>
+              <MenuItem active={active === 'Contacts' ? true: false} onClick={handleClick} icon={<RiPencilLine />}>
+                <Link to="/contact">Contacts</Link>
               </MenuItem>
             </Menu>
           </SidebarContent>

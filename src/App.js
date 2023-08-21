@@ -51,7 +51,9 @@ useEffect(() => {
     <Route path="*" element={<About/>}/>
 
       </Routes>
+    
       <Footer/>
+      
     </div>
   );
 }
