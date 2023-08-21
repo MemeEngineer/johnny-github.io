@@ -3,7 +3,9 @@
 export default function Labs(){
     return(
         <div>
-            <h1>LABS</h1>
+            
+            <h1>Labs</h1>
+           
         </div>
     )
 }

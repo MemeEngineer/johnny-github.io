@@ -1,7 +1,7 @@
 export const projects = [
     {
        link: 'https://memeengineer.github.io/RNGRPG/',
-       description: "Analog key based action game: Defeat the enemies to retrieve the Gem of Swag (1 / 10 chance) ",
+       description: "Analog key based action game: Defeat the enemies to retrieve the Gem of Swag (1/10 chance) ",
        tech:["JavaScript (OOP)", "HTML", "CSS"],
        title: "RNGRPG (Random Number Generator Role-Playing Game)",
        github: 'https://github.com/MemeEngineer/RNGRPG',

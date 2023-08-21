@@ -19,14 +19,17 @@ export default function Gallery(props) {
   );
   return (
     <div>
+        
+            
       <h1>Gallery</h1>
+        
       <SearchBar search={search} setSearch={setSearch} />
     <div className="card">
       {filterproject.map((project, index) => {
         return (
           
             <div className="gallery" key={index}>
-            <Card sx={{ maxWidth: 345 }} > 
+            <Card sx={{ maxWidth: 350 }} > 
               <div className="titleimg">
                 <a href={project.link} alt="rngrpg" target="blank">
                   <CardMedia component="img" image={project.image}></CardMedia>
