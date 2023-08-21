@@ -13,19 +13,6 @@
 
 }
 
-/* .gallery-card{
-    display:block;
-    justify-content: center;
-    align-items: center;
-    border:3px solid green;
-}*/
-
-.iconlink{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .description{
     word-wrap: break-word;
     font-weight: bold;
@@ -39,6 +26,7 @@ flex-direction: row;
 flex-wrap: wrap;
 justify-content: space-around;
 align-items: center;
+background-color: beige;
 }
 
 .tech{
@@ -50,3 +38,9 @@ align-items: center;
     font-weight: bold;
 }
 
+.iconlink{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+}
