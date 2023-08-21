@@ -7,13 +7,13 @@ created With:
 # Install dependencies
 
 - React Router
-1. `npm i react-router-dom`
+`npm i react-router-dom`
 - React SideBar and Icons
-2. `npm i react-pro-sidebar@0.7.1 react-icons`
+`npm i react-pro-sidebar@0.7.1 react-icons`
 - Installing Emailjs
-3. `npm install @emailjs/browser --save`
+`npm install @emailjs/browser --save`
 - Material-UI
-4. `npm install @mui/material @emotion/react @emotion/styled`
+ `npm install @mui/material @emotion/react @emotion/styled`
 
 # Improvement
 - Style About page
@@ -21,10 +21,15 @@ created With:
 - Add labs to lab page
 - style and format meme page
 - style Contacts page
+- Add responsive dropdown menu for mobile
 
 
 
 # Links
+- GIPHY API
+(https://developers.giphy.com/docs/api/endpoint/)
+(api.giphy.com/v1/gifs/trending)
+
 - EmailJS
 (https://www.emailjs.com/docs/examples/reactjs/)
 (https://www.youtube.com/watch?v=7huux0RAX30)
