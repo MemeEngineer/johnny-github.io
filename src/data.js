@@ -16,6 +16,14 @@ export const projects = [
      image: require('./assets/yeehaw.gif'),
      
     },
+    {link: 'https://yourbizhere.onrender.com',
+    description: "Template E-commerce website for business (restaurants or retail) with administrative capabilities",
+    tech:["JavaScript", "HTML", "CSS","Node.js", "Material-UI", "React", "MongoDB", "Express"],
+    title: "YourBizHere",
+    github: 'https://github.com/MemeEngineer/YourBizHere',
+     image: require('./assets/YourBizHere.gif'),
+     
+    },
 ]
 
 export const skills = [
