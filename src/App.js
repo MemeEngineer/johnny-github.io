@@ -8,7 +8,7 @@ import Contact from "./pages/Contact"
 import Labs from "./pages/Labs"
 import Memepage from "./pages/Memepage"
 import Footer from "./components/Footer.js"
-
+import DSA from "./pages/Dsa"
 
 function App() {
 const [memes, setMemes] = useState(null)
@@ -47,6 +47,7 @@ useEffect(() => {
     <Route path="/gallery" element={<Gallery search={search} setSearch={setSearch}/>}/>
     <Route path="/contact" element={<Contact/>}/>
     <Route path="/labs" element={<Labs/>}/>
+    <Route path="/dsa" element={<DSA/>}/>
     <Route path="/memes" element={<Memepage memes={memes}/>}/>
     <Route path="*" element={<About/>}/>
 

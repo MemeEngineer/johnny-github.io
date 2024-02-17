@@ -65,3 +65,9 @@ export const skills = [
     }
 
 ]
+
+export const DSA = [
+    {
+      
+    }
+]

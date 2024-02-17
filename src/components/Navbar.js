@@ -70,8 +70,11 @@ export default function Navbar() {
                 <Link to="/gallery">Gallery</Link>
               </MenuItem>
         
-              <MenuItem active={active === 'Labs' ? true: false} onClick={handleClick}icon={<FaFlask />}>
+              {/* <MenuItem active={active === 'Labs' ? true: false} onClick={handleClick}icon={<FaFlask />}>
                 <Link to="/labs">Labs</Link>
+              </MenuItem> */}
+              <MenuItem active={active === 'Data Structures & Algorithms' ? true: false} onClick={handleClick}icon={<FaFlask />}>
+                <Link to="/DSA">DSA</Link>
               </MenuItem>
               <MenuItem  active={active === 'Memes' ? true: false} onClick={handleClick}icon={<FaImage />}>
                 <Link to="/memes">Memes</Link>
