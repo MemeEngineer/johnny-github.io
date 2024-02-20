@@ -20,13 +20,13 @@
     cursor: pointer;
   }
   #header .pro-sidebar {
-    width: 100%;
-    min-width: 100%;
+    width: 90%;
+    min-width: 90%;
 
   }
   #header .pro-sidebar.collapsed {
-    width: 100px;
-    min-width: 200px;
+    width: 75px;
+    min-width: 60px;
   }
   #header .pro-sidebar-inner {
     background-color: white;
@@ -43,7 +43,7 @@
 
   }
   #header .pro-sidebar-inner .pro-sidebar-layout ul {
-    padding: 0 5px;
+    padding: 0px;
     /* background-color: blue; */
   }
   #header .pro-sidebar-inner .pro-sidebar-layout ul .pro-inner-item {
@@ -69,11 +69,11 @@
   }
  
   #header .logo {
-    padding: 20px;
+    padding: 10px;
   }
   .sidebarfoot{
     display:flex;
-    flex-direction: row;
+    /* flex-direction: row; */
   }
   
 .navfoot ul{

@@ -8,7 +8,7 @@ import {
   SidebarFooter,
   SidebarContent,
 } from "react-pro-sidebar";
-import { FaList, FaImage, FaFlask } from "react-icons/fa";
+import { FaList, FaImage, FaFlask, FaBars } from "react-icons/fa";
 import {
   FiHome,
   FiArrowLeftCircle,
@@ -22,6 +22,7 @@ import "react-pro-sidebar/dist/css/styles.css";
 import "./Navbar.css";
 import JohnnyWu from "../assets/JohnnyWu.gif";
 import JWLOGO from "../assets/JWLOGO.png";
+import JW from "../assets/JW.gif";
 
 export default function Navbar() {
   //create initial menuCollapse state using useState hook
@@ -33,6 +34,7 @@ export default function Navbar() {
   const menuIconClick = () => {
     //condition checking to change state from true to false and vice versa
     menuCollapse ? setMenuCollapse(false) : setMenuCollapse(true);
+
   };
 
   const handleClick = (e) => {
@@ -50,15 +52,17 @@ export default function Navbar() {
               {/* small and big change using menucollapse state */}
               <p>
                 {menuCollapse ? (
-                  <img src={JWLOGO} alt="JW Logo" />
+                  <img src={JW} alt="JW Logo" style={{height: "100px", margin: "-25px"}} />
+                  
                 ) : (
                   <img src={JohnnyWu} alt="JohnnyWu" />
+                  
                 )}
               </p>
             </div>
             <div className="closemenu" onClick={menuIconClick}>
               {/* changing menu collapse icon on click */}
-              {menuCollapse ? <FiArrowRightCircle  /> : <FiArrowLeftCircle/>}
+              {menuCollapse ? <FiArrowRightCircle style={{margin:"-75px 0px 0px 0px"}} /> : <FiArrowLeftCircle/>}
             </div>
           </SidebarHeader>
           <SidebarContent className="mainmenu">
@@ -85,7 +89,8 @@ export default function Navbar() {
             </Menu>
           </SidebarContent>
           <SidebarFooter className="sidebarfoot">
-            <Menu className="navfoot">
+            <Menu className="navfoot" >
+              <div style={{display:"flex", flexDirection: menuCollapse ?  "column": "row"}}>             
               <MenuItem>
                 <a href="https://github.com/MemeEngineer" target="blank">
                   <img
@@ -104,6 +109,7 @@ export default function Navbar() {
                   <img src={Linkedin} alt="Linkedin" style={{ height: "3em", width: "3em" }} />
                 </a>
               </MenuItem>
+              </div> 
             </Menu>
           </SidebarFooter>
         </ProSidebar>
