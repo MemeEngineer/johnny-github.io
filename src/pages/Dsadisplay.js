@@ -2,7 +2,7 @@ export default function Dsadisplay({dsa}){
 
     return(
         <div>
-            <p> Title: {dsa.title}</p>
+            <h1>  {dsa.title}</h1>
             <p> Difficulty: {dsa.difficulty}</p>
                 <p> Link: {dsa.link}</p>
                 <p> Problem: {dsa.problem}</p>

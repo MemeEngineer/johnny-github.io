@@ -68,7 +68,7 @@ export const skills = [
 
 export const DSAbank = [
     {
-      title: "FizzBuz",
+      title: "FizzBuzz",
       difficulty: "Easy",
       link:"https://leetcode.com/problems/fizz-buzz/description/",
       problem: `Given an integer n, return a string array answer (1-indexed) where:
