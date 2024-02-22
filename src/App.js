@@ -49,7 +49,7 @@ useEffect(() => {
     <Route path="/gallery" element={<Gallery search={search} setSearch={setSearch}/>}/>
     <Route path="/contact" element={<Contact/>}/>
     <Route path="/labs" element={<Labs/>}/>
-    <Route path="/dsa" element={<DSA setDsa={setDsa}/>}/>
+    <Route path="/dsa" element={<DSA setDsa={setDsa} search={search} setSearch={setSearch}/>}/>
     <Route path="/dsadisplay" element={<Dsadisplay dsa={dsa}/>}/>
     <Route path="/memes" element={<Memepage memes={memes}/>}/>
     <Route path="*" element={<About/>}/>

@@ -97,4 +97,54 @@ export const DSAbank = [
          return arr
      };`
     },
+    {
+        title: "Valid Palindrome",
+        difficulty: "Easy",
+        link:"https://leetcode.com/problems/valid-palindrome/description/",
+        problem: `A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
+
+        Given a string s, return true if it is a palindrome, or false otherwise.
+        
+         
+        
+        Example 1:
+        
+        Input: s = "A man, a plan, a canal: Panama"
+        Output: true
+        Explanation: "amanaplanacanalpanama" is a palindrome.
+        Example 2:
+        
+        Input: s = "race a car"
+        Output: false
+        Explanation: "raceacar" is not a palindrome.
+        Example 3:
+        
+        Input: s = " "
+        Output: true
+        Explanation: s is an empty string "" after removing non-alphanumeric characters.
+        Since an empty string reads the same forward and backward, it is a palindrome.`,
+        code: `/**
+        * @param {string} s
+        * @return {boolean}
+        */
+       
+       var isPalindrome = function(s) {
+       let reg = /[\W_]/g // reg ex to remove non-alpha chars
+           
+           //string is converted to lowercase
+           //string has removed all non-alphanumeric chars
+           
+           str = s.toLowerCase().replace(reg,"")
+           console.log(str)
+           let beg = str[0]
+           let end = str.length - 1
+          
+           for (let i = 0;i < Math.floor(str.length/2); i++){
+               if(str[i] !== (str[str.length -( 1 + i)])){
+               return false
+               }
+           }
+           return true
+       };`
+      },
 ]
