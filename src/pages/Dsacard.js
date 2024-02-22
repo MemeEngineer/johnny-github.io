@@ -1,17 +1,21 @@
 import {DSAbank} from "../data.js"
-export default function Dsacard(){
+// import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+
+
+export default function Dsacard({setDsa}){
     
+    function handleClick(dsa){
+        setDsa(dsa);
+    }
     return(
         <div>
            
             {DSAbank.map((data) => {
         return (
             <div>
-                <p> Title: {data.title}</p>
-                <p> Difficulty: {data.difficulty}</p>
-                <p> Link: {data.link}</p>
-                <p> Problem: {data.problem}</p>
-                <p> Solution: {data.code}</p>
+                <NavLink to="/Dsadisplay" exact> <div onClick={()=> handleClick(data)}>
+                Title: {data.title}</div></NavLink>
 
             </div>
         )

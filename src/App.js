@@ -9,10 +9,12 @@ import Labs from "./pages/Labs"
 import Memepage from "./pages/Memepage"
 import Footer from "./components/Footer.js"
 import DSA from "./pages/Dsa"
+import Dsadisplay from './pages/Dsadisplay';
 
 function App() {
 const [memes, setMemes] = useState(null)
 const [search, setSearch]= useState("")
+const [dsa, setDsa] = useState()
 const apiKey= process.env.REACT_APP_MEMEAPI_KEY
 
 const url = `https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=5`
@@ -47,7 +49,8 @@ useEffect(() => {
     <Route path="/gallery" element={<Gallery search={search} setSearch={setSearch}/>}/>
     <Route path="/contact" element={<Contact/>}/>
     <Route path="/labs" element={<Labs/>}/>
-    <Route path="/dsa" element={<DSA/>}/>
+    <Route path="/dsa" element={<DSA setDsa={setDsa}/>}/>
+    <Route path="/dsadisplay" element={<Dsadisplay dsa={dsa}/>}/>
     <Route path="/memes" element={<Memepage memes={memes}/>}/>
     <Route path="*" element={<About/>}/>
 
