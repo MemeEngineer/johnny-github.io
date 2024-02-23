@@ -2,6 +2,9 @@ import { DSAbank } from "../data.js";
 import { NavLink } from "react-router-dom";
 import "./Dsacard.css";
 import SearchBar from "../components/SearchBar"
+// import Typography from "@mui/material/Typography";
+// import Card from '@mui/material/Card';
+
 
 export default function Dsacard({ setDsa, setSearch, search }) {
   function handleClick(dsa) {

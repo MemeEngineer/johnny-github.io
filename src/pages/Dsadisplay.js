@@ -1,12 +1,19 @@
+ import Typography from "@mui/material/Typography";
+ import Card from '@mui/material/Card';
+
 export default function Dsadisplay({dsa}){
 
     return(
-        <div>
-            <h1>  {dsa.title}</h1>
+        <Card sx={{maxWidth: 1000}}>
+            <pre>
+            <Typography variant="h5">  {dsa.title}</Typography>
             <p> Difficulty: {dsa.difficulty}</p>
                 <p> Link: {dsa.link}</p>
-                <p> Problem: {dsa.problem}</p>
-                <p> Solution: {dsa.code}</p>
-        </div>
+                <code> Problem: {dsa.problem}</code>
+                <br></br>
+                <br></br>
+                <code> Solution: {dsa.code}</code>
+                </pre>
+        </Card>
     )
 }
